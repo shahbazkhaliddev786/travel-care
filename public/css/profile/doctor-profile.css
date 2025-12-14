@@ -1,0 +1,789 @@
+/* Main content styles */
+.container {
+    max-width: 1200px;
+    margin: 8rem auto 6rem;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.profile-left {
+    flex: 1;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-right {
+    flex: 2;
+    max-width: 680px;
+}
+
+/* Profile image and info */
+.profile-section {
+    display: flex;
+    padding: 52px 41px 41px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border-radius: 17px;
+    background: var(--white);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.profile-image-container {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.profile-image {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.edit-icon {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.doctor-name {
+    color: var(--text-dark);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 0.5rem;
+}
+
+.view-profile {
+    color: var(--primary-color);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.21px;
+    text-decoration: none;
+}
+
+/* Payment info */
+.payment-info {
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.payment-info-left {
+    display: flex;
+    align-items: center;
+}
+
+.payment-info-left span {
+    color: var(--text-dark);
+    font-size: 14px;
+}
+
+.payment-info i {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.payment-icon {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.payment-icon i {
+    font-size: 18px;
+}
+
+/* Appointment fees */
+.appointment-fees {
+    display: flex;
+    padding: 41px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 17px;
+    background: var(--white);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-dark);
+}
+
+.fee-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.fee-type {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.fee-icon {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.fee-type span {
+    color: var(--text-dark);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-medium);
+}
+
+.fee-input {
+    display: flex;
+    align-items: center;
+    background-color: var(--input-bg);
+    border-radius: 11px;
+    padding: 0 17px;
+    height: 55px;
+}
+
+.fee-input input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+}
+
+.currency {
+    color: var(--primary-color);
+}
+
+/* Working time */
+.working-time {
+    display: flex;
+    padding: 41px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 17px;
+    background: var(--white);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.working-time form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.time-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.time-selector-boxes {
+    display: flex;
+    width: 100%;
+    gap: 1.25rem;
+}
+
+.selector-box {
+    flex: 1 0 0;
+}
+
+.time-label {
+    font-size: var(--font-size-normal);
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.time-picker {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding: 0px 17px;
+    gap: 4px;
+    border-radius: 11px;
+    background: var(--input-bg);
+}
+
+.time-picker span {
+    flex: 1;
+    text-align: center;
+    color: var(--text-dark);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-normal);
+}
+
+.time-arrow {
+    cursor: pointer;
+    color: #38b2ac;
+}
+
+/* Working days */
+
+.working-days {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.days-title {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-dark);
+}
+
+.check-box-selection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.day-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #38b2ac;
+    border-radius: 4px;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.custom-checkbox.checked {
+    background-color: #38b2ac;
+    color: white;
+}
+
+.day-label {
+    cursor: pointer;
+}
+
+/* Services section */
+.services-section {
+    display: flex;
+    padding: 36px 25px;
+    flex-direction: column;
+    border-radius: 17px;
+    background: var(--white);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+
+.services-title {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* Edit form styles */
+.service-edit-form {
+    padding: 30px 20px;
+    border-bottom: 1px solid var(--light-accent);
+}
+
+.service-edit-form.no-border {
+    border: none;
+}
+
+.edit-form-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.edit-form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.edit-form-group label {
+    display: block;
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.edit-input-wrapper {
+    height: 55px;
+    background-color: var(--input-bg);
+    border-radius: 11px;
+    padding: 0 17px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edit-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+}
+
+.currency-symbol {
+    color: var(--primary-color);
+    font-size: var(--font-size-normal);
+}
+
+.edit-form-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1 0 0;
+}
+
+.save-button {
+    height: 55px;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 11px;
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-normal);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.save-button:hover {
+    background-color: #2c7a7b;
+}
+
+.service-item {
+    padding: 28px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-accent);
+}
+
+.service-info h3 {
+    font-size: var(--font-size-normal);
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.service-price {
+    color: var(--primary-color);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-bold);
+    margin-left: 10px;
+}
+
+.service-description {
+    font-size: 12px;
+    color: var(--grey);
+}
+
+.edit-button {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    padding: 12px 20px;
+    width: 90px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.edit-button:hover {
+    background-color: var(--light-accent);
+}
+
+.add-service {
+    border: 2px dashed var(--primary-color);
+    border-radius: 12px;
+    padding: 14px 0;
+    width: 360px;
+    text-align: center;
+    color: var(--primary-color);
+    margin: 20px auto 0;
+    cursor: pointer;
+}
+
+.add-service i {
+    margin-right: 5px;
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Below navbar so navbar remains visible on mobile */
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 120px auto;
+    padding: 50px 40px 40px;
+    width: 90%;
+    max-width: 540px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 36px 0px rgba(0, 0, 0, 0.16);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--grey);
+}
+
+.modal-body,
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 49px;
+}
+
+.edit-profile-form {
+    width: 100%;
+}
+
+.form-title {
+    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+}
+
+/* Profile photo section */
+.profile-photo-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+}
+
+.profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+.edit-profile-image {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.delete-photo-btn {
+    color: var(--primary-color);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+}
+
+/* Gallery section */
+.profile-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.delete-gallery-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #ff4d4d;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    opacity: 0.8;
+    font-size: 12px;
+}
+
+.delete-gallery-image:hover {
+    background-color: #ff4d4d;
+    color: white;
+    opacity: 1;
+}
+
+.add-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-more-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--grey);
+    font-size: 12px;
+    font-weight: var(--font-weight-normal);
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.gallery-item.uploading {
+    position: relative;
+    opacity: 0.8;
+}
+
+/* Form styles */
+
+.data-fields {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    height: 55px;
+    padding: 0 17px;
+    border-radius: 11px;
+    border: none;
+    outline: none;
+    background-color: var(--input-bg);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-normal);
+    color: var(--dark-accent);
+}
+
+.form-textarea {
+    height: 136px;
+    padding: 20px;
+    resize: none;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+/* Payment Methods Modal Styles */
+.payment-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.payment-section h3 {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-dark);
+}
+
+.saved-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 27px;
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+}
+
+.card-logo {
+    margin-right: 15px;
+}
+
+.card-logo img {
+    width: 50px;
+    height: 30px;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-holder {
+    font-size: 12px;
+    color: var(--text-dark);
+}
+
+.card-number {
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-dark);
+}
+
+.delete-card-btn {
+    background: none;
+    border: none;
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-medium);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+.modal-body .paypal-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.paypal-form .form-input {
+    padding: 0px 17px;
+    border-radius: 11px;
+    border: none;
+    background-color: var(--input-bg);
+    font-size: var(--font-size-normal);
+    margin-bottom: 10px;
+}
+
+/* Add Card Modal Styles */
+#addCardModal .modal-body {
+    gap: 30px;
+}
+
+#addCardModal h3 {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-bold);
+}
+
+#addCardModal label {
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-medium);
+}
+
+#addCardModal .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#addCardModal .half {
+    width: 48%;
+}
+
+#addCardModal .expiry-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+#addCardModal .expiry-inputs input {
+    width: 45%;
+    text-align: center;
+}
+
+.terms-text {
+    text-align: center;
+    font-size: var(--font-size-body);
+    line-height: 28px;
+    color: var(--grey);
+    margin-top: 15px;
+}
+
+.terms-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}

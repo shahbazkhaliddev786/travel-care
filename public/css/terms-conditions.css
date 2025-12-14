@@ -1,0 +1,97 @@
+/* Terms & Conditions Page Styles */
+
+.main-content {
+    margin-top: 110px; /* Account for fixed navbar (83px) + extra spacing */
+    padding: var(--spacing-xl) var(--spacing-mxl);
+    min-height: calc(100vh - 83px);
+    animation: fadeIn var(--transition-normal);
+}
+
+.page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0px 4px 20px rgba(21, 79, 79, 0.08);
+    padding: var(--spacing-xl);
+    animation: scaleIn var(--transition-normal) 0.2s both;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--light-accent);
+}
+
+.page-title {
+    font-size: var(--font-size-lh1);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-content {
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.content-section {
+    margin-bottom: var(--spacing-lg);
+    animation: fadeIn var(--transition-normal) 0.4s both;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    color: var(--dark-accent);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-content {
+    font-size: var(--font-size-body);
+    margin-bottom: var(--spacing-sm);
+}
+
+.content-list {
+    margin: var(--spacing-sm) 0;
+    padding-left: var(--spacing-md);
+}
+
+.content-list li {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+    font-size: var(--font-size-body);
+}
+
+.last-updated {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: var(--font-size-normal);
+    color: var(--grey);
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        padding: var(--spacing-md) var(--spacing-sm);
+        margin-top: 100px;
+    }
+    
+    .page-container {
+        padding: var(--spacing-md);
+    }
+    
+    .page-title {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+    }
+} 

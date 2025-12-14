@@ -1,0 +1,638 @@
+/* Appointment Page Responsive Styles */
+
+/* Tablet and Desktop adjustments */
+@media (max-width: 1200px) {
+    .main-content {
+        max-width: 1000px;
+        gap: var(--spacing-lg);
+    }
+    
+    .profile-left {
+        max-width: 350px;
+    }
+    
+    .appointment-section {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        padding: var(--spacing-lg);
+        padding-top: calc(83px + var(--spacing-lg));
+        gap: var(--spacing-lg);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .profile-left {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .appointment-section {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .doctor-img {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .profile-card h1 {
+        font-size: 22px;
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+}
+
+@media (max-width: 834px) {
+    .profile-left {
+        display: none;
+    }
+}
+
+/* Tablet specific styles */
+@media (max-width: 768px) {
+    .main-content {
+        padding: var(--spacing-md);
+        padding-top: calc(83px + var(--spacing-md));
+        gap: var(--spacing-md);
+    }
+    
+    /* Profile Card */
+    .profile-card {
+        padding: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .doctor-img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .profile-card h1 {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+    
+    .specialty {
+        font-size: 14px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* About Section */
+    .about-section {
+        padding: var(--spacing-lg);
+    }
+    
+    .about-section h2 {
+        font-size: 18px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+        padding: var(--spacing-md) 0;
+    }
+    
+    .stat {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-sm) 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .stat:last-child {
+        border-bottom: none;
+    }
+    
+    .rating {
+        margin-bottom: 0;
+    }
+    
+    .number {
+        margin-bottom: 0;
+    }
+    
+    .stat p {
+        margin: 0;
+        text-align: right;
+    }
+    
+    /* Working Time */
+    .working-time {
+        padding: var(--spacing-lg);
+    }
+    
+    .working-time h2 {
+        font-size: 18px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .weekdays {
+        gap: 6px;
+    }
+    
+    .weekdays span {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+    
+    /* Appointment Section */
+    .appointment-section {
+        padding: var(--spacing-lg);
+    }
+    
+    .appointment-section h2 {
+        font-size: 20px;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Date Selection */
+    .date-selection {
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .dates {
+        width: 100%;
+        justify-content: flex-start;
+        gap: var(--spacing-sm);
+    }
+    
+    .date-item {
+        min-width: 120px;
+        padding: var(--spacing-sm);
+    }
+    
+    .date-nav {
+        align-self: center;
+        order: -1;
+    }
+    
+    /* Time Slots */
+    .time-slots h3 {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: var(--spacing-sm);
+    }
+    
+    .time-slot {
+        padding: var(--spacing-sm);
+        font-size: 14px;
+    }
+    
+    /* Fees Section */
+    .fees-section h3 {
+        font-size: 18px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .fee-info {
+        gap: var(--spacing-sm);
+    }
+    
+    .fee-info i {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .fee-details h4 {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+    
+    .fee-details p {
+        font-size: 13px;
+    }
+    
+    .fee-amount {
+        font-size: 16px;
+        margin-top: var(--spacing-xs);
+    }
+    
+    /* Address Section */
+    .address-section h3 {
+        font-size: 18px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .address-input {
+        padding: var(--spacing-md);
+        font-size: 16px;
+    }
+    
+    /* Action Buttons */
+    .action-buttons {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .btn-cancel,
+    .btn-payment {
+        padding: var(--spacing-md);
+        font-size: 16px;
+        border-radius: var(--border-radius-md);
+    }
+}
+
+/* Mobile specific styles */
+@media (max-width: 480px) {
+    .main-content {
+        padding: var(--spacing-sm);
+        padding-top: calc(83px + var(--spacing-sm));
+        gap: var(--spacing-sm);
+    }
+    
+    /* Profile Card */
+    .profile-card {
+        padding: var(--spacing-md);
+    }
+    
+    .doctor-img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .profile-card h1 {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+    
+    .specialty {
+        font-size: 13px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    /* About Section */
+    .about-section {
+        padding: var(--spacing-md);
+    }
+    
+    .about-section h2 {
+        font-size: 16px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .stats {
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .stat {
+        padding: var(--spacing-xs) 0;
+    }
+    
+    .rating {
+        font-size: 11px;
+    }
+    
+    .number {
+        font-size: 16px;
+    }
+    
+    .stat p {
+        font-size: 12px;
+    }
+    
+    .info-item {
+        gap: var(--spacing-xs);
+    }
+    
+    .info-item i {
+        font-size: 14px;
+        margin-top: 2px;
+    }
+    
+    .info-item span {
+        font-size: 13px;
+    }
+    
+    /* Working Time */
+    .working-time {
+        padding: var(--spacing-md);
+    }
+    
+    .working-time h2 {
+        font-size: 16px;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .hours {
+        font-size: 13px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .weekdays {
+        gap: 4px;
+    }
+    
+    .weekdays span {
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+    }
+    
+    /* Appointment Section */
+    .appointment-section {
+        padding: var(--spacing-md);
+    }
+    
+    .appointment-section h2 {
+        font-size: 18px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* Date Selection */
+    .date-selection {
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .dates {
+        gap: var(--spacing-xs);
+    }
+    
+    .date-item {
+        min-width: 100px;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .date-item .day {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+    
+    .date-item .date {
+        font-size: 12px;
+    }
+    
+    .date-nav {
+        width: 36px;
+        height: 36px;
+    }
+    
+    /* Time Slots */
+    .time-slots {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .time-slots h3 {
+        font-size: 14px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-xs);
+    }
+    
+    .time-slot {
+        padding: var(--spacing-xs);
+        font-size: 12px;
+    }
+    
+    /* Fees Section */
+    .fees-section {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .fees-section h3 {
+        font-size: 16px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .fee-options {
+        gap: var(--spacing-sm);
+    }
+    
+    .fee-item {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-xs);
+    }
+    
+    .fee-info {
+        gap: var(--spacing-xs);
+    }
+    
+    .fee-info i {
+        font-size: 18px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .fee-details h4 {
+        font-size: 14px;
+        margin-bottom: 1px;
+    }
+    
+    .fee-details p {
+        font-size: 11px;
+    }
+    
+    .fee-amount {
+        font-size: 14px;
+        margin-top: 0;
+    }
+    
+    /* Address Section */
+    .address-section {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .address-section h3 {
+        font-size: 16px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .address-input {
+        padding: var(--spacing-sm);
+        font-size: 14px;
+        height: 45px;
+    }
+    
+    /* Action Buttons */
+    .action-buttons {
+        gap: var(--spacing-sm);
+    }
+    
+    .btn-cancel,
+    .btn-payment {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 14px;
+        height: 45px;
+    }
+    
+    /* Missing data adjustments */
+    .missing-data {
+        font-size: 12px;
+    }
+    
+    .missing-data i {
+        font-size: 10px;
+    }
+    
+    .fee-amount.missing-data {
+        font-size: 11px;
+    }
+    
+    .number.missing-data {
+        font-size: 14px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    .main-content {
+        padding: var(--spacing-xs);
+        padding-top: calc(83px + var(--spacing-xs));
+    }
+    
+    .profile-card,
+    .about-section,
+    .working-time,
+    .appointment-section {
+        padding: var(--spacing-sm);
+    }
+    
+    .doctor-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-card h1 {
+        font-size: 16px;
+    }
+    
+    .specialty {
+        font-size: 12px;
+    }
+    
+    .about-section h2,
+    .working-time h2 {
+        font-size: 14px;
+    }
+    
+    .appointment-section h2 {
+        font-size: 16px;
+    }
+    
+    .date-item {
+        min-width: 85px;
+        padding: var(--spacing-xs);
+    }
+    
+    .date-item .day {
+        font-size: 12px;
+    }
+    
+    .date-item .date {
+        font-size: 10px;
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .time-slot {
+        font-size: 11px;
+    }
+    
+    .weekdays span {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+    }
+    
+    .fee-details h4 {
+        font-size: 13px;
+    }
+    
+    .fee-details p {
+        font-size: 10px;
+    }
+    
+    .fee-amount {
+        font-size: 13px;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .main-content {
+        padding-top: calc(60px + var(--spacing-sm));
+    }
+    
+    .stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .stat {
+        flex-direction: column;
+        text-align: center;
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .stat:last-child {
+        border-right: none;
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+}
+
+/* High DPI screens adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .doctor-img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+
+/* Print styles */
+@media print {
+    .main-content {
+        flex-direction: column;
+        padding: 0;
+        gap: var(--spacing-md);
+    }
+    
+    .date-nav,
+    .action-buttons {
+        display: none;
+    }
+    
+    .appointment-section {
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+    
+    .profile-card,
+    .about-section,
+    .working-time {
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+}

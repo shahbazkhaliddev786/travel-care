@@ -1,0 +1,224 @@
+/* Profile Image Modal Styles - Updated with 950px width fix */
+.profile-image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1001; /* Above navbar (1000) */
+    left: 0;
+    top: 83px; /* Below navbar height */
+    width: 100%;
+    height: calc(100% - 83px); /* Adjust height to account for navbar */
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.modal-content.image-modal-content {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 950px !important;
+    max-width: 950px !important;
+    height: 640px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+
+
+.image-slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.nav-btn {
+    width: 50px;
+    height: 90px;
+    border-radius: 14px;
+    background: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    z-index: 2;
+    font-size: 18px;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    background: #f5f5f5;
+    transform: scale(1.05);
+}
+
+.nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 15px;
+    max-width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 30px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.2s ease;
+    background: #f8f9fa;
+}
+
+.thumbnail.active {
+    border-color: #00bcd4;
+    transform: scale(1.05);
+}
+
+.thumbnail:hover {
+    transform: scale(1.02);
+    border-color: #00bcd4;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    .profile-image-modal {
+        top: 70px; /* Mobile navbar height */
+        height: calc(100% - 70px);
+    }
+    
+    .modal-content {
+        margin: 20px;
+        padding: 20px;
+        width: calc(100vw - 40px);
+        max-width: calc(100vw - 40px);
+        max-height: calc(100vh - 110px); /* Account for mobile navbar + margins */
+        border-radius: 15px;
+    }
+    
+
+    
+    .image-slider {
+        gap: 20px;
+    }
+    
+    .main-image {
+        height: 300px;
+        margin: 0 50px;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .prev-btn {
+        left: 5px;
+    }
+    
+    .next-btn {
+        right: 5px;
+    }
+    
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+    }
+    
+    .thumbnail-container {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        margin: 10px;
+        padding: 15px;
+        width: calc(100vw - 20px);
+        max-width: calc(100vw - 20px);
+        max-height: calc(100vh - 90px); /* Account for mobile navbar + smaller margins */
+    }
+    
+    .main-image {
+        height: 250px;
+        margin: 0 40px;
+    }
+    
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .thumbnail-container {
+        gap: 8px;
+    }
+}

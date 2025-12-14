@@ -1,0 +1,979 @@
+/* Analysis Page Styles - Redesigned to match reference image */
+.analysis-container {
+    min-height: calc(100vh - 166px);
+    padding: 24px;
+    background: #f8f9fa;
+    margin-top: 83px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.analysis-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Left Panel - Analysis List */
+.analysis-left-panel {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.analysis-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #e9ecef;
+    background: var(--white);
+    flex-shrink: 0;
+}
+
+.analysis-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.btn-primary {
+    background: none;
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: var(--light-accent);
+    transform: translateY(-1px);
+}
+
+/* Analysis List */
+.analysis-list {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    max-width: 100%;
+}
+
+.analysis-date-group {
+    margin-bottom: 32px;
+}
+
+.analysis-date {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 16px 0;
+    padding: 0 24px;
+    background: #f8f9fa;
+    line-height: 40px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.analysis-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid #f1f3f4;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--white);
+}
+
+.analysis-item:hover {
+    background: #f8f9fa;
+}
+
+.analysis-item.active {
+    background: #e8f5f5;
+    border-left: 4px solid var(--primary-color);
+}
+
+.analysis-info {
+    flex: 1;
+}
+
+.analysis-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+}
+
+.analysis-type {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.analysis-actions {
+    flex-shrink: 0;
+}
+
+.download-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+    background: #e8f5f5;
+    color: #009999;
+}
+
+/* Pagination */
+.analysis-pagination {
+    padding: 24px;
+    border-top: 1px solid #e9ecef;
+    background: var(--white);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.page-item {
+    display: flex;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    background: var(--white);
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.page-item.active .page-link {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+.page-item.disabled .page-link {
+    background: #f8f9fa;
+    color: #adb5bd;
+    cursor: not-allowed;
+}
+
+.page-link:hover:not(.page-item.disabled .page-link):not(.page-item.active .page-link) {
+    background: #f8f9fa;
+    border-color: #dee2e6;
+    color: #495057;
+}
+
+/* Right Panel - Analysis Details */
+.analysis-right-panel {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    padding: 40px;
+    height: fit-content;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.analysis-details-card {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.details-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+.details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.details-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #495057;
+    margin: 0;
+    text-align: justify;
+}
+
+.details-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.download-section {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.download-report-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
+
+.download-report-btn:hover {
+    background: #009999;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 178, 178, 0.3);
+}
+
+.download-report-btn i {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+/* Desktop view - maintain specific widths */
+@media (min-width: 1201px) {
+    .analysis-content {
+        grid-template-columns: 755px 365px;
+        gap: 32px;
+        max-width: 1200px;
+    }
+}
+
+/* Tablet and smaller desktop view */
+@media (max-width: 1200px) {
+    .analysis-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 100%;
+    }
+    
+    .analysis-container {
+        padding: 20px;
+    }
+    
+    .analysis-right-panel {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .analysis-container {
+        padding: 16px;
+    }
+    
+    .analysis-content {
+        gap: 20px;
+    }
+    
+    .analysis-right-panel {
+        padding: 24px;
+    }
+    
+    .details-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .analysis-container {
+        padding: 16px;
+        margin-top: 70px;
+    }
+    
+    .analysis-content {
+        gap: 16px;
+    }
+    
+    .analysis-left-panel {
+        height: auto;
+        margin-top: 1.5rem;
+    }
+    
+    .analysis-right-panel {
+        padding: 20px;
+        display: none; /* Hide right panel on mobile, use modal instead */
+    }
+    
+    .details-title {
+        font-size: 22px;
+    }
+    
+    .analysis-header {
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .analysis-title {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .btn-primary {
+        padding: 12px 16px;
+        font-size: 14px;
+        justify-content: center;
+    }
+    
+    .analysis-pagination {
+        padding: 16px;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    
+    .page-link {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    
+    /* Full screen modals for mobile */
+    .modal-overlay {
+        align-items: flex-start;
+        padding: 0;
+        justify-content: flex-start;
+    }
+    
+    .modal-container,
+    .analysis-details-container {
+        width: 100%;
+        height: 100vh;
+        max-width: 100%;
+        max-height: 100vh;
+        margin: 0;
+        border-radius: 0;
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px; 
+        box-sizing: border-box;
+    }
+    
+    .modal-header {
+        padding: 20px 16px 16px 16px;
+        border-bottom: 1px solid #e9ecef;
+        background: var(--white);
+        z-index: 10;
+        flex-shrink: 0; /* Prevent header from shrinking */
+    }
+    
+    .modal-body,
+    .analysis-modal-body {
+        padding: 0;
+        flex: 1; /* Take remaining space */
+        overflow-y: auto;
+        min-height: 0; /* Allow flex shrinking */
+        height: calc(100vh - 70px - 60px); /* Full height minus navbar and header */
+        max-height: calc(100vh - 70px - 60px);
+    }
+    
+    .modal-details-content {
+        padding: 20px 16px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .submit-btn {
+        width: calc(100% - 32px);
+        flex-shrink: 0; /* Prevent button from shrinking */
+    }
+}
+
+@media (max-width: 480px) {
+    .analysis-container {
+        margin-top: 60px;
+        padding: 12px;
+    }
+    
+    .analysis-content {
+        gap: 12px;
+    }
+    
+    .analysis-right-panel {
+        padding: 16px;
+    }
+    
+    .analysis-details-card {
+        padding: 0;
+    }
+    
+    .details-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    
+    .details-content {
+        gap: 20px;
+    }
+    
+    .details-description {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .analysis-header {
+        padding: 12px 16px;
+    }
+    
+    .analysis-title {
+        font-size: 18px;
+    }
+    
+    .btn-primary {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+    
+    .analysis-item {
+        padding: 12px 16px;
+    }
+    
+    .analysis-name {
+        font-size: 15px;
+    }
+    
+    .analysis-type {
+        font-size: 13px;
+    }
+    
+    .analysis-date {
+        padding: 0 16px;
+        font-size: 14px;
+        line-height: 36px;
+    }
+    
+    .info-label {
+        font-size: 12px;
+    }
+    
+    .info-value {
+        font-size: 14px;
+    }
+    
+    .download-report-btn {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+    
+    .pagination {
+        gap: 2px;
+    }
+    
+    .page-link {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+    }
+}
+
+/* Upload Analysis Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+/* Analysis Details Modal Specific Styles */
+.analysis-details-modal {
+    display: none;
+}
+
+.analysis-details-container {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.analysis-modal-body {
+    padding: 0;
+}
+
+.modal-details-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.modal-details-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #495057;
+    margin: 0;
+    text-align: justify;
+}
+
+.modal-details-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.modal-info-row:last-child {
+    border-bottom: none;
+}
+
+.modal-info-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-info-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.modal-download-section {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.modal-download-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
+
+.modal-download-btn:hover {
+    background: #009999;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 178, 178, 0.3);
+}
+
+.modal-download-btn i {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-container {
+    background: var(--white);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background: #f8f9fa;
+    color: #495057;
+}
+
+.modal-body {
+    padding: 32px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #495057;
+    background: #f8f9fa;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(0, 178, 178, 0.1);
+}
+
+.form-input::placeholder {
+    color: #adb5bd;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #495057;
+    background: #f8f9fa;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    min-height: 80px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(0, 178, 178, 0.1);
+}
+
+.form-textarea::placeholder {
+    color: #adb5bd;
+}
+
+.file-upload-area {
+    border: 2px dashed #00b2b2;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f0fffe;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.file-upload-area:hover {
+    border-color: #009999;
+    background: #e8fffe;
+}
+
+.file-upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.upload-icon {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.upload-text {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+}
+
+.submit-btn:hover {
+    background: #009999;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 178, 178, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Modal Responsive Design */
+@media (max-width: 1024px) {
+    .modal-container {
+        width: 90%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .modal-overlay {
+        z-index: 999;
+        margin-top: 83px;
+    }
+
+    .modal-container {
+        width: 100%;
+        max-width: 800px;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    
+    .modal-header {
+        padding: 20px 24px;
+    }
+    
+    .modal-title {
+        font-size: 20px;
+    }
+    
+    .modal-body {
+        padding: 24px;
+    }
+    
+    .file-upload-area {
+        padding: 30px 15px;
+    }
+    
+    .upload-icon {
+        font-size: 28px;
+    }
+    
+    .upload-text {
+        font-size: 14px;
+    }
+    
+    .form-input, .form-textarea {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .modal-header {
+        padding: 16px 20px;
+    }
+    
+    .modal-title {
+        font-size: 18px;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .file-upload-area {
+        padding: 24px 12px;
+    }
+    
+    .form-input, .form-textarea {
+        font-size: 16px;
+        padding: 14px 16px;
+    }
+    
+    .submit-btn {
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,27 @@
+<svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_452_31121)">
+<path d="M1441 0H0V1024H1441V0Z" fill="url(#paint0_linear_452_31121)"/>
+<path style="mix-blend-mode:overlay" opacity="0.6" d="M1546 350.465C1448.15 325.112 1393.92 351.184 1312.67 420.186C1258.06 466.667 1211.99 532.501 1147.19 552.487C1067.76 576.911 985.655 524.219 924.374 459.526C863.092 394.833 811.152 315.858 739.193 269.378C589.512 172.698 398.193 245.292 263.352 368.635C205.273 422.003 152.585 484.541 89.168 528.909C25.7509 573.277 -53.1469 597.996 -122.276 567.488C-179.074 542.6 -220.871 484.203 -275 451.962V-33H1546V350.465Z" fill="url(#paint1_linear_452_31121)"/>
+<g opacity="0.6">
+<path d="M-180 243.273C-69.0988 223.712 -7.61752 243.864 84.4977 297.309C146.353 333.22 198.548 384.34 272.357 399.845C362.391 418.772 455.467 377.918 524.9 328.023C594.334 278.128 652.986 216.741 734.801 180.619C904.142 105.586 1121.03 161.818 1273.83 257.426C1339.85 298.787 1399.57 347.204 1471.3 381.636C1543.02 416.068 1632.63 435.165 1710.92 411.506C1775.29 391.987 1822.68 346.823 1884 321.939V60H-180V243.273Z" fill="url(#paint2_linear_452_31121)" style="mix-blend-mode:overlay"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_452_31121" x1="467.674" y1="1024" x2="467.674" y2="0" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DBF9F9"/>
+<stop offset="0.9999" stop-color="#63E8E8"/>
+<stop offset="1" stop-color="#68E9E9"/>
+</linearGradient>
+<linearGradient id="paint1_linear_452_31121" x1="635.473" y1="-33" x2="635.19" y2="709" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="0.99" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint2_linear_452_31121" x1="852" y1="75" x2="852.073" y2="421.941" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="0.99" stop-color="white"/>
+</linearGradient>
+<clipPath id="clip0_452_31121">
+<path d="M0 0H1441V988C1441 1007.88 1424.88 1024 1405 1024H36C16.1177 1024 0 1007.88 0 988V0Z" fill="white"/>
+</clipPath>
+</defs>
+</svg>

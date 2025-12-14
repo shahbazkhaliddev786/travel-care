@@ -1,0 +1,315 @@
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 8rem auto 6rem;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* Alert Styles */
+.alert {
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+
+/* Profile Column Styles */
+.profile-column {
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 52px 41px 41px;
+    gap: 25px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Personal Information Section*/
+
+.personal-info-section {
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    border-radius: 1rem;
+    background: var(--white);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+
+.personal-info-section h2 {
+    color: var(--dark-accent);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-medium);
+}
+
+
+.user-profile-form {
+    width: 100%;
+}
+
+.input-group.field-control {
+    border: none;
+    border-radius: 11px;
+    background-color: #F2FAFA;
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-size-normal);
+    color: var(--text-dark);
+}
+
+.field-control span {
+    color: var(--primary-color);
+    font-size: var(--font-size-normal);
+}
+
+
+.medical-info-input {
+    height: 200px;
+    border: none;
+    outline: none;
+    background-color: #F2FAFA;
+    border-radius: 15px;
+    padding: 20px; /* Andar ka text top se start hoga */
+    resize: none; /* User resize na kar sake */
+    color: var(--text-dark);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-normal);
+}
+
+.medical-info-input::placeholder {
+    color: var(--grey);
+}
+
+
+/* Payment Column Styles */
+.payment-column {
+    width: 660px;
+}
+
+.card-section {
+    display: flex;
+    padding: 3rem 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 1rem;
+    background: var(--white);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-section h2, .add-card-section h3 {
+    color: var(--dark-accent);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-bold);
+}
+
+.saved-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.75rem;
+    border-radius: 9px;
+    border: 1px solid var(--border-color);
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+}
+
+.card-logo {
+    width: 50px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.card-logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-owner {
+    color: var(--text-dark);
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.card-number {
+    color: var(--dark-accent);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-medium);
+}
+
+.delete-card-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+}
+
+.no-cards-message {
+    text-align: center;
+    padding: 2rem;
+    color: var(--grey);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-normal);
+}
+
+.no-cards-message p {
+    margin: 0;
+}
+
+/* Chronic Pathologies and Medications Styling */
+.chronic-pathologies-container,
+.chronic-medications-container,
+.allergies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chronic-pathologies-container .input-group,
+.chronic-medications-container .input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.remove-field-btn {
+    background: none;
+    border: none;
+    color: #ff4757;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.remove-field-btn:hover {
+    background-color: #ff47570d;
+}
+
+.add-card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 25px;
+}
+
+.card-form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.form-row .label-input {
+    width: 50%;
+}
+
+.expire-date-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.expire-date-row .field-box {
+    width: 45%;
+}
+
+
+
+.btn-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.btn-row .btn {
+    margin: 0;
+    width: 50%;
+}
+
+.terms-text {
+    width: 50%;
+    font-size: 13px;
+    color: var(--grey);
+    text-align: start;
+    line-height: 1.5rem;
+}
+
+.terms-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .profile-column, .payment-column {
+        width: 100%;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .logo-menu, .user-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
